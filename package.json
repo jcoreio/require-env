@@ -1,5 +1,5 @@
 {
-  "name": "require-env",
+  "name": "@jcoreio/require-env",
   "version": "0.0.0-development",
   "description": "get value of an environment variable; throw if undefined or empty string",
   "main": "lib/index.js",
