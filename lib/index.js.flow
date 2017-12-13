@@ -1,3 +1,5 @@
 // @flow
 
-declare module.exports: {};
+type Env = {[key: string]: ?string}
+
+declare module.exports: (name: string, env?: Env) => string

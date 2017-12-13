@@ -1,7 +1,7 @@
 {
   "name": "require-env",
   "version": "0.0.0-development",
-  "description": "get value of an environment variable or throw if undefined",
+  "description": "get value of an environment variable; throw if undefined or empty string",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint lib test",
@@ -62,6 +62,6 @@
     "mocha": "^3.2.0",
     "nyc": "^10.2.0",
     "rimraf": "^2.6.1",
-    "semantic-release": "^6.3.6"
+    "semantic-release": "^8.2.0"
   }
 }
