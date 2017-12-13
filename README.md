@@ -28,6 +28,10 @@ var environment = {...process.env, ...require('./defaultEnv.js')}
 var FOO = requireEnv('FOO', environment)
 ```
 
+## See also
+
+* [`defaultenv`](https://github.com/jcoreio/defaultenv) - fantastic CLI/Node API for loading default environment variable values
+
 ## Error messages
 
 The `Error`s thrown will have `message`s showing all environment variables:
