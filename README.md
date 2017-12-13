@@ -5,7 +5,7 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-A simple function that returns the value of an environment variable or throws if it's undefined or the empty string.
+A simple function that returns the value of an environment variable, but **throws if it's not a non-empty string**.
 The error message includes the entire environment to aid debugging.  Flow type defs included.
 
 ## Usage
