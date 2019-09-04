@@ -6,7 +6,8 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 A simple function that returns the value of an environment variable, but **throws if it's not a non-empty string**.
-The error message includes the entire environment to aid debugging.  Flow type defs included.
+Logs the entire environment to `console.error` to aid debugging.
+Flow type defs included.
 
 ## Usage
 
@@ -34,18 +35,8 @@ var FOO = requireEnv('FOO', environment)
 
 ## Error messages
 
-The `Error`s thrown will have `message`s showing all environment variables:
-
-```
-missing environment variable FOO. Environment: {
-  "TERM_PROGRAM": "Apple_Terminal",
-  "NODE": "/Users/andy/.nvm/versions/node/v6.10.3/bin/node",
-  "npm_config_version_git_tag": "true",
-  "npm_package_homepage": "https://github.com/jcoreio/require-env#readme",
-  "NVM_CD_FLAGS": "",
-  "npm_package_devDependencies_mocha": "^3.2.0",
-  "SHELL": "/usr/local/bin/bash",
-  "TERM": "xterm-256color",
-  "npm_package_devDependencies_rimraf": "^2.6.1"
-}
-```
+In the past `Error`s thrown had all environment variables in their `message`s.
+I've since realized this was a huge security risk when error messages are sent
+from server to client.  Now the message and environment variables are printed to
+`console.error`.  You can customize this by monkeypatching the
+`require('@jcoreio/require-env').logError` function.

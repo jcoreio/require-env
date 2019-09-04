@@ -2,4 +2,7 @@
 
 type Env = {[key: string]: ?string}
 
-declare module.exports: (name: string, env?: Env) => string
+declare module.exports: {
+  (name: string, env?: Env): string;
+  logError: typeof console.error;
+}
