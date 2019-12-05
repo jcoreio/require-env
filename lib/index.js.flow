@@ -1,6 +1,6 @@
 // @flow
 
-type Env = {[key: string]: ?string}
+type Env = typeof process.env
 
 declare module.exports: {
   (name: string, env?: Env): string;
