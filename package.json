@@ -14,9 +14,9 @@
     "test:watch": "mocha --watch $npm_package_config_mocha",
     "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "precommit": "npm run lint && flow",
+    "precommit": "npm run lint && flow && tsc",
     "prepush": "npm test",
-    "prepublishOnly": "npm run lint && flow && npm test",
+    "prepublishOnly": "npm run lint && flow && tsc && npm test",
     "open:coverage": "open coverage/lcov-report/index.html",
     "semantic-release": "semantic-release"
   },
@@ -63,6 +63,7 @@
     "nyc": "^11.4.1",
     "rimraf": "^2.6.1",
     "semantic-release": "^15.13.24",
-    "sinon": "^7.4.2"
+    "sinon": "^7.4.2",
+    "typescript": "^3.7.5"
   }
 }
