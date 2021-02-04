@@ -2459,10 +2459,10 @@ flat@^4.1.0:
   dependencies:
     is-buffer "~2.0.3"
 
-flow-bin@^0.143.0:
-  version "0.143.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.143.0.tgz#f802a18ae86ba87e11dbbbba5922039b551e3f1c"
-  integrity sha512-wduASzl276BkxWBQ83wFMf43ZRNSCQdb4de7JA6GAGsJ7pAbETc1tGWRP/lnk9wnjxmH/tPeqIyLoRK1gvHkiA==
+flow-bin@^0.144.0:
+  version "0.144.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.144.0.tgz#32fbeb94ef39cb8b9fa03d67b6f085042ce3a1bd"
+  integrity sha512-+TeTukkfRjimaNhOHt8iQ/M33Fg8Afrm+iBHS19XzAz2fH4GwgroKCrAxDHnZoAUnmRv6jm/XngFxADlcqwYkw==
 
 flow-watch@^1.1.1:
   version "1.1.1"
