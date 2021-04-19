@@ -51,7 +51,7 @@
     "@jedwards1211/eslint-config-flow": "^1.0.0",
     "chai": "^4.1.2",
     "codecov": "^3.0.0",
-    "copy": "^0.3.0",
+    "copy": "^0.3.1",
     "eslint": "^3.18.0",
     "eslint-plugin-flowtype": "^2.30.4",
     "eslint-watch": "^3.0.1",
