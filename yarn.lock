@@ -158,9 +158,10 @@
   version "1.0.0"
   resolved "https://registry.npmjs.org/@jedwards1211/eslint-config-es5/-/eslint-config-es5-1.0.0.tgz#b63e8217250147a348b6d360367d92cc6950a83f"
 
-"@jedwards1211/eslint-config-flow@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@jedwards1211/eslint-config-flow/-/eslint-config-flow-1.0.0.tgz#306baa90573f772342f53bef67ef4f2fe3f7cb8c"
+"@jedwards1211/eslint-config-flow@^3.0.0":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@jedwards1211/eslint-config-flow/-/eslint-config-flow-3.0.1.tgz#b35bfdebadbf8abd0647a4ac1db8fe4a89348e5a"
+  integrity sha512-MexlDEe8a8eC3M1Sq5gUYli97zvHMEj4hq90pXwDZ603KorCc5AfkXTvD4ZQgneNgzxbLmdfftToXEa9vQMUQQ==
 
 "@marionebl/sander@^0.6.0":
   version "0.6.1"
