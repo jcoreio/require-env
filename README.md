@@ -25,19 +25,20 @@ var FOO = requireEnv('FOO')
 
 By default it looks in `process.env`, but you can override this by passing the environment
 hash as the second argument:
+
 ```js
-var environment = {...process.env, ...require('./defaultEnv.js')}
+var environment = { ...process.env, ...require('./defaultEnv.js') }
 var FOO = requireEnv('FOO', environment)
 ```
 
 ## See also
 
-* [`defaultenv`](https://github.com/jcoreio/defaultenv) - fantastic CLI/Node API for loading default environment variable values
+- [`defaultenv`](https://github.com/jcoreio/defaultenv) - fantastic CLI/Node API for loading default environment variable values
 
 ## Error messages
 
 In the past `Error`s thrown had all environment variables in their `message`s.
 I've since realized this was a huge security risk when error messages are sent
-from server to client.  Now the message and environment variables are printed to
-`console.error`.  You can customize this by monkeypatching the
+from server to client. Now the message and environment variables are printed to
+`console.error`. You can customize this by monkeypatching the
 `require('@jcoreio/require-env').logError` function.

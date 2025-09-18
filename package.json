@@ -2,34 +2,11 @@
   "name": "@jcoreio/require-env",
   "version": "0.0.0-development",
   "description": "get value of an environment variable; throw if undefined or empty string",
-  "main": "lib/index.js",
   "scripts": {
-    "lint": "eslint lib test --cache",
-    "lint:fix": "eslint --fix lib test --cache",
-    "lint:watch": "esw --watch lib test --cache",
-    "flow": "flow",
-    "flow:coverage": "for file in lib/**.js test/**.js; do echo $file; flow coverage $file; done",
-    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore lib/ --ignore node_modules/ --watch .flowconfig --watch lib/ --watch test/",
-    "test": "NODE_ENV=production BABEL_ENV=test nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
-    "test:watch": "mocha --watch $npm_package_config_mocha",
-    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
-    "precommit": "npm run lint && flow && tsc",
-    "prepush": "npm test",
-    "prepublishOnly": "npm run lint && flow && tsc && npm test",
-    "open:coverage": "open coverage/lcov-report/index.html",
-    "semantic-release": "semantic-release"
-  },
-  "config": {
-    "mocha": "./test/**/*.js",
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  },
-  "nyc": {
-    "include": [
-      "lib/**/*.js"
-    ]
+    "tc": "toolchain",
+    "toolchain": "toolchain",
+    "test": "toolchain test",
+    "prepublishOnly": "echo This package is meant to be published by semantic-release from the dist build directory. && exit 1"
   },
   "repository": {
     "type": "git",
@@ -45,25 +22,36 @@
   },
   "homepage": "https://github.com/jcoreio/require-env#readme",
   "devDependencies": {
-    "@commitlint/cli": "^6.2.0",
-    "@commitlint/config-conventional": "^6.0.2",
+    "@jcoreio/toolchain": "^5.5.5",
+    "@jcoreio/toolchain-circle": "^5.5.5",
+    "@jcoreio/toolchain-esnext": "^5.5.5",
+    "@jcoreio/toolchain-mocha": "^5.5.5",
+    "@jcoreio/toolchain-semantic-release": "^5.5.5",
+    "@jcoreio/toolchain-typescript": "^5.5.5",
     "@jedwards1211/eslint-config-es5": "^1.0.0",
-    "@jedwards1211/eslint-config-flow": "^1.0.0",
-    "chai": "^4.1.2",
-    "codecov": "^3.0.0",
-    "copy": "^0.3.1",
-    "eslint": "^3.18.0",
-    "eslint-plugin-flowtype": "^2.41.0",
-    "eslint-watch": "^3.0.1",
-    "flow-bin": "^0.237.0",
-    "flow-watch": "^1.1.1",
-    "husky": "^0.14.3",
-    "istanbul": "^0.4.5",
-    "mocha": "^6.0.0",
-    "nyc": "^11.4.1",
-    "rimraf": "^2.6.1",
-    "semantic-release": "^15.13.24",
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.19.127",
+    "@types/sinon": "^7.5.0",
+    "chai": "^4.3.7",
+    "eslint": "^9.17.0",
+    "globals": "^16.0.0",
+    "lint-staged": "^15.2.2",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "prettier": "^3.4.2",
     "sinon": "^7.4.2",
-    "typescript": "^3.7.5"
+    "typescript": "^5.1.0"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "packageManager": "pnpm@10.6.5",
+  "dependencies": {
+    "@babel/runtime": "^7.26.0"
+  },
+  "@jcoreio/toolchain": {
+    "migratedVersion": "5.5.5"
   }
 }

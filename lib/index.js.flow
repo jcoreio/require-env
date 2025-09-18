@@ -1,8 +1,0 @@
-// @flow
-
-type Env = typeof process.env
-
-declare module.exports: {
-  (name: string, env?: Env): string;
-  logError: typeof console.error;
-}
