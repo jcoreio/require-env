@@ -2,6 +2,19 @@
   "name": "@jcoreio/require-env",
   "version": "0.0.0-development",
   "description": "get value of an environment variable; throw if undefined or empty string",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "./package.json": "./dist/package.json",
+    ".": {
+      "types": {
+        "import": "./dist/index.d.mts",
+        "default": "./dist/index.d.ts"
+      },
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
     "tc": "toolchain",
     "toolchain": "toolchain",
@@ -41,7 +54,7 @@
     "nyc": "^15.1.0",
     "prettier": "^3.4.2",
     "sinon": "^7.4.2",
-    "typescript": "^5.1.0"
+    "typescript": "^5.9.2"
   },
   "sideEffects": false,
   "engines": {
